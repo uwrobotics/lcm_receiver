@@ -30,7 +30,7 @@ class TwistPublisher(Node):
         ros_msg.twist.angular.z = list(msg.angular)[2]
         print(ros_msg)
         self.publisher_.publish(ros_msg)
-        self.get_logger().info(f'Publishing: linear.x={ros_msg.linear.x}, angular.z={ros_msg.angular.z}')
+        self.get_logger().info(f'Publishing: linear.x={ros_msg.twist.linear.x}, angular.z={ros_msg.twist.angular.z}')
         
 
         
